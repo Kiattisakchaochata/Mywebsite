@@ -34,6 +34,7 @@ scrollToTopBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+// Toggle Hamburger
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
@@ -42,9 +43,12 @@ hamburger.addEventListener('click', () => {
     document.body.classList.toggle('menu-open');
 });
 
-// Auto close mobile menu when click a link
-document.querySelectorAll('.nav-links a').forEach(link => {
+// Close menu when clicking on a link (for mobile)
+const navLinkItems = document.querySelectorAll('.nav-links a');
+
+navLinkItems.forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('open');
+        document.body.classList.remove('menu-open');
     });
 });
