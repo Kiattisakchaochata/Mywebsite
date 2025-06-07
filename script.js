@@ -39,8 +39,8 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    document.body.classList.toggle('menu-open');
+    const isOpen = navLinks.classList.toggle('open');
+    document.body.classList.toggle('menu-open', isOpen);
 });
 
 // Close menu when clicking on a link (for mobile)

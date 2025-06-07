@@ -431,6 +431,8 @@ body.dark-mode #scrollToTop {
 }
 body.menu-open {
     overflow: hidden;
+    height: 100vh;
     position: fixed;
     width: 100%;
+    top: 0;
 }
