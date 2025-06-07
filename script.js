@@ -41,3 +41,10 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
     document.body.classList.toggle('menu-open');
 });
+
+// Auto close mobile menu when click a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+    });
+});
