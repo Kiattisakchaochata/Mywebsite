@@ -1,0 +1,431 @@
+/* === Global Reset === */
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === Variables === */
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --accent-color: #ff4081;
+    --light-color: #f4f4f4;
+    --dark-color: #121212;
+    --text-color: #333;
+    --text-color-dark: #f0f0f0;
+    --header-height: 64px;
+}
+
+/* === Dark Mode Body === */
+body.dark-mode {
+    background-color: var(--dark-color);
+    color: var(--text-color-dark);
+}
+
+/* === Container === */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === Header Desktop & Mobile === */
+.site-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between; /* Logo ซ้าย - Menu ขวา */
+    align-items: center;
+}
+
+/* Logo */
+.site-header .logo {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Nav */
+.site-header nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Nav Links */
+.site-header .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.site-header .nav-links li {
+    margin-left: 20px;
+}
+
+.site-header .nav-links a,
+.site-header .nav-links button {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.site-header .nav-links a:hover,
+.site-header .nav-links button:hover {
+    color: var(--accent-color);
+}
+
+/* Hamburger → Mobile Only */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+
+
+/* === Hero Section === */
+.hero {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#cta-button {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+    transition: all 0.3s ease;
+}
+
+#cta-button:hover {
+    transform: translateY(-3px);
+    background: #ff1f6a;
+    box-shadow: 0 8px 20px rgba(255, 64, 129, 0.6);
+}
+
+/* === Features Section === */
+.features-section {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feature-box {
+    flex: 1 1 250px;
+    background: #f9f9f9;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* === About Section === */
+.about-section {
+    padding: 60px 0;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+/* === Testimonials Section === */
+.testimonials-section {
+    padding: 60px 0;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.testimonial-box {
+    flex: 1 1 250px;
+    background: var(--light-color);
+    color: var(--text-color);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    font-style: italic;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-5px);
+}
+
+/* === Contact Section === */
+.contact-section {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: #1a5edb;
+}
+
+/* === Footer === */
+.site-footer {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.site-footer .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.site-footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.site-footer .social-icons a:hover {
+    color: var(--accent-color);
+}
+
+body.dark-mode .site-footer .social-icons a {
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .site-footer .social-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* === Scroll To Top === */
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#scrollToTop:hover {
+    background-color: #1a5edb;
+}
+
+/* === Dark Mode Sections === */
+body.dark-mode .site-header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .site-header .nav-links a,
+body.dark-mode .site-header .nav-links button {
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #2a0845, #6441a5);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .features-section,
+body.dark-mode .about-section,
+body.dark-mode .testimonials-section,
+body.dark-mode .contact-section {
+    background-color: #1f1f1f;
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .feature-box,
+body.dark-mode .testimonial-box {
+    background-color: #292929;
+    color: var(--text-color-dark);
+}
+
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+    background-color: #292929;
+    color: var(--text-color-dark);
+    border: 1px solid #555;
+}
+
+body.dark-mode .site-footer {
+    background-color: #1f1f1f;
+    color: var(--text-color-dark);
+}
+
+body.dark-mode #scrollToTop {
+    background-color: var(--secondary-color);
+    color: var(--text-color-dark);
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* New: left-header group */
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* เว้นระยะ logo กับ hamburger */
+}
+
+.left-header .logo {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Hamburger style */
+.hamburger {
+    display: none; /* default: desktop ซ่อน */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+
+@media (max-width: 768px) {
+
+    .site-header nav {
+        position: relative;
+    }
+
+    .site-header .nav-links {
+        flex-direction: column;
+        background-color: rgba(106, 17, 203, 0.9); /* ทำ bg ให้โปร่ง 0.9 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        height: 100vh;
+        width: 250px;
+        padding-top: 120px;
+        padding-left: 30px;
+        align-items: flex-start;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .site-header .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .site-header .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .site-header nav {
+        background: none;
+    }
+}

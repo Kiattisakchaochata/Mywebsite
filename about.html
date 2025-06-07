@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us | ⭐️ My Marketing Website</title>
+    <meta name="description" content="Learn more about our team and mission to help your business grow online.">
+    <meta name="keywords" content="about us, marketing team, company mission">
+    <meta name="author" content="Your Company Name">
+
+    <!-- OG Tags -->
+    <meta property="og:title" content="About Us | ⭐️ My Marketing Website">
+    <meta property="og:description" content="Learn more about our team and mission to help your business grow online.">
+    <meta property="og:image" content="https://example.com/images/your-og-image.jpg">
+    <meta property="og:url" content="https://example.com/about.html">
+    <meta property="og:type" content="website">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <h1 class="logo">⭐️ My Website</h1>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button id="darkModeToggle">🌙</button></li>
+                </ul>
+                <button class="hamburger" id="hamburger">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <section class="about-section" data-aos="fade-up">
+        <div class="container">
+            <h3>About Our Team</h3>
+            <p>We are passionate about helping businesses grow with beautiful, high-converting marketing websites. Our team consists of designers, marketers, and developers who work together to deliver amazing results.</p>
+            <p>With years of experience in digital marketing and web development, we understand what it takes to build websites that not only look great but also perform well in driving conversions.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2025 ⭐️ My Website. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
