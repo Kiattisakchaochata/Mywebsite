@@ -429,3 +429,8 @@ body.dark-mode #scrollToTop {
         background: none;
     }
 }
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
